@@ -1,14 +1,15 @@
 // Replace the Google Forms placeholder once you have the live URL.
 // Set this to your live form (e.g. "https://docs.google.com/forms/d/e/.../viewform")
 // and the apply buttons will start opening it in a new tab.
-const FORM_URL = ""; // TODO: paste Google Forms URL here
+const FORM_URL = "https://forms.gle/62ZUAqgsfzRGPsya9";
 
 document.addEventListener("DOMContentLoaded", () => {
   const formLinks = document.querySelectorAll("[data-form-link]");
   if (FORM_URL) {
     formLinks.forEach((el) => {
       el.setAttribute("href", FORM_URL);
-      el.textContent = "応募フォームを開く →";
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
     });
   }
 
