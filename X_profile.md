@@ -8,22 +8,22 @@
 
 X の bio は半角160文字（≒全角80文字）まで。日本語向けと英語併記の2案を用意。
 
-### 案A（日本語のみ・推奨）
+### 案A（日本語のみ・推奨, 約 148 字）
 
 ```
-京都工芸繊維大学 准教授 / BS研究室
-解離性同一症(DID)の脳機能研究 - fMRI，幾何モード，多言語症例レビュー
+京都工芸繊維大学 准教授 ／ ブレインサイエンス研究室
+解離性同一症（DID）の脳機能研究をしています（fMRI／幾何モード／多言語症例レビュー）
 研究紹介・参加募集 → shogokajimura.github.io/did-research
-※研究参加のご相談はDMでなくサイトのフォームからお願いします
+※ご相談はDMでなくサイトのフォーム or メールで
 ```
 
-### 案B（日英併記）
+### 案B（日英併記, 約 156 字）
 
 ```
 Associate Professor, Kyoto Institute of Technology
-Brain Science Lab | DID neuroimaging (fMRI, geometric modes)
+Brain Science Lab ／ DID neuroimaging（fMRI, geometric modes）
 解離性同一症の脳機能研究／実験参加者募集中
-→ shogokajimura.github.io/did-research
+shogokajimura.github.io/did-research
 ```
 
 ### 推奨フィールド設定
