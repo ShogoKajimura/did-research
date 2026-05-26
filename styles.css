@@ -65,7 +65,7 @@ body::before {
   position: sticky;
   top: 12px;
   z-index: 20;
-  margin: 18px 0 4px;
+  margin: 18px 0 16px;
   padding: 16px 20px;
   display: flex;
   justify-content: space-between;
@@ -143,14 +143,15 @@ body::before {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(340px, 0.9fr);
-  gap: 22px;
-  align-items: stretch;
-  padding: 12px 0 24px;
+  gap: 16px;
+  align-items: start;
+  padding: 0 0 24px;
 }
 
 .hero-copy,
 .hero-panel,
 .stats-grid > article,
+.update-card,
 .research-card,
 .site-card,
 .flow-card,
@@ -163,25 +164,31 @@ body::before {
 }
 
 .hero-copy {
-  padding: 36px 40px 32px;
+  padding: 40px 40px 36px;
   border-radius: var(--radius-xl);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  min-height: 420px;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
 }
 
 .hero-top {
   display: grid;
-  gap: 6px;
+  gap: 8px;
+  width: 100%;
+}
+
+.hero-top .eyebrow {
+  text-align: center;
 }
 
 .hero-bottom {
   display: grid;
   gap: 18px;
+  width: 100%;
 }
 
 .hero-copy::after {
@@ -214,10 +221,11 @@ h3 {
 }
 
 h1 {
-  max-width: min(18ch, 100%);
+  max-width: min(20ch, 100%);
   font-size: clamp(2.6rem, 5.4vw, 4.4rem);
   line-height: 1.05;
-  margin-block: 18px 14px;
+  margin-block: 28px 22px;
+  margin-inline: auto;
 }
 
 h2 {
@@ -242,15 +250,17 @@ h3 {
 }
 
 .hero-text {
-  max-width: none;
-  margin: 18px 0 24px;
-  font-size: 1.04rem;
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  text-align: left;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .button {
@@ -412,9 +422,9 @@ h3 {
 }
 
 .section-note {
-  max-width: 56ch;
   margin: 0;
   flex: 1 1 280px;
+  min-width: 0;
 }
 
 @media (max-width: 720px) {
@@ -587,6 +597,7 @@ h3 {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 6px;
+  justify-content: center;
 }
 
 /* ===== Flow ===== */
@@ -597,25 +608,39 @@ h3 {
 }
 
 .flow-card {
-  padding: 20px;
+  padding: 18px 20px;
   border-radius: var(--radius-lg);
   display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 16px;
+  row-gap: 6px;
   position: relative;
   align-content: start;
 }
 
 .flow-card .step {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  align-self: center;
   font-family: var(--font-display);
   color: var(--accent-deep);
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   line-height: 1;
+  padding-right: 4px;
+  border-right: 1px solid var(--line);
+  padding-right: 16px;
 }
 
 .flow-card h3 {
+  grid-column: 2;
+  grid-row: 1;
   font-size: 1.02rem;
-  min-height: 2.6em;
+  margin: 0;
+}
+
+.flow-card p {
+  grid-column: 2;
+  grid-row: 2;
   margin: 0;
 }
 
@@ -767,7 +792,7 @@ h3 {
   align-items: center;
   gap: 12px 18px;
   padding: 12px 20px;
-  margin: 4px 0 14px;
+  margin: 0 0 16px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent-soft) 50%, white);
   color: var(--accent-deep);
@@ -826,6 +851,7 @@ h3 {
 .hero-copy,
 .hero-panel,
 .stats-grid > article,
+.update-card,
 .research-card,
 .site-card,
 .flow-card,
