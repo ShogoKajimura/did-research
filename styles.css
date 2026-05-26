@@ -247,7 +247,8 @@ h3 {
 }
 
 .hero-text {
-  max-width: 56ch;
+  max-width: 90ch;
+  width: 100%;
   margin: 0 auto;
   font-size: 1.02rem;
   text-align: left;
@@ -721,7 +722,7 @@ h3 {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contact-list li {
@@ -729,7 +730,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--accent-soft) 18%, white);
