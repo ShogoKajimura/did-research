@@ -657,12 +657,13 @@ h3 {
 /* Pending-approval badge on Step 2-5 */
 .flow-card[data-status="pending"] {
   position: relative;
+  padding-bottom: 38px;
 }
 
-.flow-card[data-status="pending"]::before {
+.flow-card[data-status="pending"]::after {
   content: "⏳ 変更承認後";
   position: absolute;
-  top: 12px;
+  bottom: 10px;
   right: 14px;
   font-size: 0.72rem;
   padding: 4px 10px;
@@ -678,14 +679,6 @@ h3 {
 .flow-card[data-status="pending"] .step,
 .flow-card[data-status="pending"] h3 {
   opacity: 0.85;
-}
-
-@media (max-width: 720px) {
-  .flow-card[data-status="pending"]::before {
-    position: static;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
 }
 
 .flow-card h3 a {
